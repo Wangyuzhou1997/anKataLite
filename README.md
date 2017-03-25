@@ -2,6 +2,7 @@
  
 ### 1. 使用注解+泛型来代替频繁的findViewById()操作。
 
+### 2. [通用Adapter]泛型方法获取View，缓存View减少findViewById的次数。
 
 
 不定时更新中。。。
