@@ -7,7 +7,7 @@ import android.view.View;
  */
 
 public abstract class BannerAdapter {
-    public abstract View getView(int position);
+    public abstract View getView(View convertView, int position);
 
     public abstract int getCount();
 

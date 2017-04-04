@@ -38,9 +38,13 @@ public class BannerActivity extends AppCompatActivity {
 
         mBannerView.setAdapter(new BannerAdapter() {
             @Override
-            public View getView(int position) {
-                Logger.d(imgs[position]);
-                ImageView iv = new ImageView(BannerActivity.this);
+            public View getView(View convertView, int position) {
+                ImageView iv = null;
+                if (convertView == null) {
+                    iv = new ImageView(BannerActivity.this);
+                } else {
+                    iv = (ImageView) convertView;
+                }
                 Glide.with(BannerActivity.this).load(imgs[position]).placeholder(R.mipmap.ic_launcher).into(iv);
                 return iv;
             }
